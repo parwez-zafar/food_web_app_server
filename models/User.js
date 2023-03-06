@@ -7,15 +7,20 @@ const UserScheema = new Schema({
         type: String,
         required: true,
     },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
     location: {
         type: String,
         required: true,
     },
-    email: {
+    password: {
         type: String,
         required: true,
     },
-    password: {
+    c_password: {
         type: String,
         required: true,
     },
