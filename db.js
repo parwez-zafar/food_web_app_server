@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb+srv://prwzfood:prwzfood@cluster0.eucgxi6.mongodb.net/prwz_food?retryWrites=true&w=majority';
+const mongoUri = process.env.DATABASE;
 mongoose.set('strictQuery', false);
 const dbconnection = async () => {
     try {

@@ -1,9 +1,14 @@
 const express = require('express');
 const app = express();
 const port = 8000;
-const dbconnection = require('./db');
+const dotenv = require('dotenv');
+dotenv.config({
+    path: './config.env',
+})
 
+const dbconnection = require('./db');
 dbconnection();
+
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header(
