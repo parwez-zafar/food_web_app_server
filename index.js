@@ -9,7 +9,7 @@ dotenv.config({
 
 
 app.use(cors({
-    origin: "https://jocular-kangaroo-fa1f11.netlify.app"
+    origin: "*"
 }))
 
 const dbconnection = require('./db');
