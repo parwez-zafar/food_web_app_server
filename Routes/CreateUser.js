@@ -4,7 +4,7 @@ const User = require('../models/User');
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const jwt_secret = 'prwzfoodappisthebestwebapp';
+const jwt_secret = process.env.SECRETKEY;
 
 
 router.post('/createUser',
@@ -79,9 +79,6 @@ router.post('/loginUser', async (req, res) => {
         res.json({ success: false })
     }
 })
-
-
-
 
 
 module.exports = router;
